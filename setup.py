@@ -1,7 +1,7 @@
 import setuptools
 
 with open('README.md', 'r', encoding='utf-8') as f:
-    long_decription = f.read()
+    long_description = f.read()
 
 setuptools.setup(
     name='pritunl-wireguard-client',
@@ -18,6 +18,10 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     packages=[
+        'pritunl_wireguard_client',
+        'pritunl_wireguard_client.utils'
+    ],
+    install_requires=[
         'pynacl',
         'cryptography',
         'requests',
